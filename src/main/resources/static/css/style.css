@@ -122,14 +122,14 @@ body {
     left: 0;
     right: 0;
 
-    height: 300px;
+    height: 200px;
 
     margin-left: auto;
     margin-right: auto;
 
     justify-content: center;
     align-items: end;
-    overflow: hidden;
+
 }
 .present {
     background-image: url("../img/present-4.png");
