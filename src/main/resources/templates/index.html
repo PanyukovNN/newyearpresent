@@ -11,15 +11,24 @@
     <div class="container">
         <div class="main-image">
             <div id="countdown" class="countdown">
-<!--                <h1 class="countdown-title">Подарок можно открыть через</h1>-->
                 <div class="countdown-number">
                     <span class="days countdown-time"></span>
                 </div>
             </div>
 
-            <div class="present">
-
+            <div class="main-text">
+                Любимая, здесь спрятан твой подарок на новый год, но открыть ты его сможешь только когда истечет таймер &#128519;&#127876;&#127873;
             </div>
+
+            <div class="present-wrap">
+                <div class="present"></div>
+
+                <div class="popup">
+                    <span class="popuptext" id="myPopup">Ещё рано &#128536;</span>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
@@ -76,8 +85,19 @@
         var deadline = new Date(deadline);
         initializeClock('countdown', deadline);
 
-        $(".present").on("click", function () {
+        var presentAnimated = false;
 
+        $(".present").on("click", function () {
+            if (presentAnimated === false) {
+                $(this).css("transform", "scale(1.5) rotate(400deg)");
+                presentAnimated = true;
+            } else {
+                $(this).css("transform", "");
+                presentAnimated = false;
+            }
+
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
         });
     </script>
 </body>
