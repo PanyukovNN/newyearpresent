@@ -42,7 +42,7 @@ body {
     width: 350px;
 
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     right: 0;
     left: 0;
 
@@ -89,7 +89,7 @@ body {
     right: 0;
     left: 0;
 
-    transform: translateY(120px);
+    transform: translateY(90px);
 
     margin-left: 1rem;
     margin-right: 1rem;
@@ -98,7 +98,7 @@ body {
 
     border-radius: 25px;
 
-    background-color: rgba(62, 62, 62, 0.5);
+    background-color: rgba(62, 62, 62, 0.6);
 
     /*text-indent: 1.5em;*/
     font-size: 27px;
