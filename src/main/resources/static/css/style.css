@@ -89,10 +89,16 @@ body {
     right: 0;
     left: 0;
 
-    transform: translateY(150px);
+    transform: translateY(120px);
 
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    padding: 1rem;
+
+    border-radius: 25px;
+
+    background-color: rgba(62, 62, 62, 0.5);
 
     /*text-indent: 1.5em;*/
     font-size: 27px;
@@ -103,7 +109,7 @@ body {
 
     font-family: Helvetica,sans-serif;
 
-    color: #f7f7f7;
+    color: #e1e1e1;
 
     opacity: 0.9;
 }
