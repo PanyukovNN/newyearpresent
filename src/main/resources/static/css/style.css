@@ -84,7 +84,7 @@ body {
 }
 
 .present {
-    background-image: url("../img/present-3.png");
+    background-image: url("../img/present-4.png");
     background-size: cover;
 
     width: 200px;
@@ -92,7 +92,7 @@ body {
 
     position: absolute;
 
-    bottom: 20px;
+    bottom: 4rem;
     left: 0;
     right: 0;
 
@@ -100,4 +100,9 @@ body {
     margin-right: auto;
 
     box-shadow: 0 0 0 black;
+
+    transition: all .8s ease;
+}
+.present:hover {
+    transform: scale(1.7) rotate(400deg);
 }
