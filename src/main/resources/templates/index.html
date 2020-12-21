@@ -11,7 +11,7 @@
     <div class="container">
         <div class="main-image">
             <div id="countdown" class="countdown">
-                <h1 class="countdown-title">Подарок можно открыть через</h1>
+<!--                <h1 class="countdown-title">Подарок можно открыть через</h1>-->
                 <div class="countdown-number">
                     <span class="days countdown-time"></span>
                 </div>
@@ -23,9 +23,11 @@
         </div>
     </div>
 
-    <script src="https://daruse.ru/assets/js/snowfall.js"></script>
+    <script src="js/snowfall.js"></script>
     <script type="text/javascript">
-        $(document).snowfall();
+        $(document).ready(function(){
+            $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20});
+        });
 
         function getTimeRemaining(endtime) {
             var t = Date.parse(endtime) - Date.parse(new Date());
