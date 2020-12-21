@@ -1,0 +1,103 @@
+body {
+    background-color: #f2f2f2 !important;
+
+    overflow: hidden;
+}
+
+.main-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url("../img/wallpaper3.jpg");
+    background-position: center;
+    background-size: cover;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 550px) {
+    .main-image {
+        width: 550px;
+    }
+}
+@media (max-width: 550px) {
+    .main-image {
+        width: 100%;
+    }
+}
+
+.countdown-title {
+    color: white;
+    font-weight: 100;
+    font-size: 21px;
+
+    opacity: 0.8;
+}
+
+.countdown {
+    width: 350px;
+
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    left: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    font-family: clockicons,sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 16px;
+}
+
+.countdown-number {
+    padding: 0 10px;
+    border-radius: 3px;
+    /*background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);*/
+    display: inline-block;
+
+    opacity: 0.8;
+}
+
+.timer-number {
+    font-size: 40px;
+}
+
+.countdown-time {
+    padding: 0 15px;
+    border-radius: 3px;
+    /*background-image: linear-gradient( 135deg, #FFA6B7 10%, #1E2AD2 100%);*/
+    display: inline-block;
+}
+
+.countdown-text {
+    display: block;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.present {
+    background-image: url("../img/present-3.png");
+    background-size: cover;
+
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 0;
+    right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0 0 0 black;
+}
