@@ -1,7 +1,8 @@
 body {
     background-color: #f2f2f2 !important;
 
-    max-height: 100%;
+    max-width: 375px;
+    max-height: 667px;
     overflow: hidden;
 }
 
@@ -12,24 +13,28 @@ body {
     left: 0;
     right: 0;
 
-    background-image: url("../img/wallpaper3.jpg");
+    background-image: url("../img/wallpaper4.jpg");
     background-position: center;
     background-size: cover;
 
     margin-left: auto;
     margin-right: auto;
+
+    width: 375px !important;
+    height: 667px !important;
 }
 
-@media (min-width: 550px) {
-    .main-image {
-        width: 550px;
-    }
-}
-@media (max-width: 550px) {
-    .main-image {
-        width: 100%;
-    }
-}
+/*@media (min-width: 550px) {*/
+/*    .main-image {*/
+/*        width: 375px;*/
+/*        height: 667px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 550px) {*/
+/*    .main-image {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
 .countdown-title {
     color: white;
@@ -40,7 +45,7 @@ body {
 }
 
 .countdown {
-    width: 350px;
+    width: 100%;
 
     position: absolute;
     top: 1rem;
@@ -76,35 +81,41 @@ body {
     border-radius: 3px;
     /*background-image: linear-gradient( 135deg, #FFA6B7 10%, #1E2AD2 100%);*/
     display: inline-block;
+
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .countdown-text {
     display: block;
     padding-top: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .main-text {
     position: absolute;
+
+    width: 316px;
 
     right: 0;
     left: 0;
 
     transform: translateY(90px);
 
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 
     padding: 1rem;
 
     border-radius: 25px;
 
-    background-color: rgba(62, 62, 62, 0.6);
+    background-color: rgba(196, 196, 196, 0.25);
 
     /*text-indent: 1.5em;*/
     font-size: 21px;
     font-weight: bold;
     line-height: 1.4;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 
     text-align: center;
 
@@ -133,11 +144,15 @@ body {
 
 }
 .present {
-    background-image: url("../img/present-4.png");
+    position: absolute;
+    top: 0;
+    left: 105px;
+
+    background-image: url("../img/present-5.png");
     background-size: cover;
 
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 
     transition: all .8s ease;
 }
@@ -159,7 +174,7 @@ body {
 
 /* The actual popup */
 .popup .popuptext {
-    visibility: hidden;
+    /*visibility: hidden;*/
     width: 180px;
     height: 40px;
     background-color: #555;
@@ -177,7 +192,9 @@ body {
 
     margin-left: -80px;
 
-    opacity: 0.9;
+    transition: opacity ease 1s;
+
+    opacity: 0;
 }
 
 /* Popup arrow */
@@ -193,19 +210,34 @@ body {
 }
 
 /* Toggle this class - hide and show the popup */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+/*.popup .show {*/
+/*    !*visibility: visible;*!*/
+/*    -webkit-animation: fadeIn 1s;*/
+/*    animation: fadeIn 1s;*/
+/*}*/
+
+.glow {
+    position: absolute;
+    top: -30px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 70%,rgba(255,255,255,0) 100%);
+    width: 206px;
+    height: 206px;
+    opacity: 1;
+    border-radius: 50%;
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 0.9;}
-}
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:0.9;}
-}
+/*!* Add animation (fade in the popup) *!*/
+/*@-webkit-keyframes fadeIn {*/
+/*    from {opacity: 0;}*/
+/*    to {opacity: 0.9;}*/
+/*}*/
+
+/*@keyframes fadeIn {*/
+/*    from {opacity: 0;}*/
+/*    to {opacity:0.9;}*/
+/*}*/

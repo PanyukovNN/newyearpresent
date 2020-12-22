@@ -20,22 +20,23 @@
                 Любимая, здесь спрятан твой подарок на новый год, но открыть ты его сможешь только когда истечет таймер &#128519;&#127876;&#127873;
             </div>
 
+
             <div class="present-wrap">
-                <div class="present"></div>
+                <div class="glow"></div>
+<!--                animate__tada-->
+                <div class="present animate__animated animate__pulse animate__infinite"></div>
 
                 <div class="popup">
                     <span class="popuptext" id="myPopup">Ещё рано &#128536;</span>
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <script src="js/snowfall.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20});
+            $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 1});
         });
 
         function getTimeRemaining(endtime) {
@@ -85,20 +86,48 @@
         var deadline = new Date(deadline);
         initializeClock('countdown', deadline);
 
-        var presentAnimated = false;
+        var present = $(".present");
+        var popup = $("#myPopup");
+        var blockAnimation = false;
 
-        $(".present").on("click", function () {
-            if (presentAnimated === false) {
-                $(this).css("transform", "scale(1.5) rotate(400deg)");
-                presentAnimated = true;
-            } else {
-                $(this).css("transform", "");
-                presentAnimated = false;
+        present.on("click", function () {
+            if (blockAnimation === false) {
+                blockAnimation = true;
+
+                document.documentElement.style.setProperty('--animate-duration', '1s');
+                present.removeClass("animate__pulse");
+                present.removeClass("animate__infinite");
+                present.addClass("animate__tada");
+
+                togglePopup();
+
+                var returnPulseAnimation = function () {
+                    document.documentElement.style.setProperty('--animate-duration', '1.5s');
+                    present.addClass("animate__pulse");
+                    present.addClass("animate__infinite");
+                    present.removeClass("animate__tada");
+
+                    var finishAnimation = function() {
+                        blockAnimation = false;
+                    }
+
+                    setTimeout(togglePopup, 1000);
+                    setTimeout(finishAnimation, 2000);
+                }
+
+                setTimeout(returnPulseAnimation, 1000);
             }
-
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
         });
+
+        function togglePopup() {
+            if (popup.css("opacity") !== "0") {
+                popup.css("opacity", "0");
+            } else {
+                popup.css("opacity", "0.9");
+            }
+        }
+
+        document.documentElement.style.setProperty('--animate-duration', '1.5s');
     </script>
 </body>
 </html>
