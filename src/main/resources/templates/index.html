@@ -56,9 +56,6 @@
         function initializeClock(id, endtime) {
             var clock = document.getElementById(id);
             var daysSpan = clock.querySelector('.days');
-            var hoursSpan = clock.querySelector('.hours');
-            var minutesSpan = clock.querySelector('.minutes');
-            var secondsSpan = clock.querySelector('.seconds');
 
             function updateClock() {
                 var t = getTimeRemaining(endtime);
@@ -68,9 +65,9 @@
                     "<span class='timer-number'>" + ('0' + t.hours).slice(-2) +   "</span> ч. " +
                     "<span class='timer-number'>" + ('0' + t.minutes).slice(-2) + "</span> м. " +
                     "<span class='timer-number'>" + ('0' + t.seconds).slice(-2) + "</span> сек.";
-                // hoursSpan.innerHTML = ('0' + t.hours).slice(-2) + " ч.";
-                // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2) + " мин.";
-                // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2) + " сек.";
+
+                var wallpaperIndex = parseInt(new Date().getMinutes() / 6);
+                $(".main-image").css("background-image", "url(\"../img/wallpaper-" + wallpaperIndex + ".jpg\")");
 
                 if (t.total <= 0) {
                     clearInterval(timeinterval);

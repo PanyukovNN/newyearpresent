@@ -13,7 +13,6 @@ body {
     left: 0;
     right: 0;
 
-    background-image: url("../img/wallpaper4.jpg");
     background-position: center;
     background-size: cover;
 
@@ -22,6 +21,8 @@ body {
 
     width: 375px !important;
     height: 667px !important;
+
+    transition: all ease 5s;
 }
 
 /*@media (min-width: 550px) {*/
@@ -57,7 +58,7 @@ body {
 
     /*font-family: clockicons,sans-serif;*/
     font-family: Helvetica,sans-serif;
-    font-weight: bold;
+    font-weight: 400;
 
     color: #fff;
     display: inline-block;
