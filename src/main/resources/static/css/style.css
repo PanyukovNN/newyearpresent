@@ -121,7 +121,7 @@ body {
 
     font-family: Helvetica,sans-serif;
 
-    color: #e1e1e1;
+    color: #fff;
 
     opacity: 0.9;
 }
@@ -188,9 +188,7 @@ body {
     font-size: 21px;
 
     bottom: 0;
-    right: 10px;
-
-    margin-left: -80px;
+    left: -90px;
 
     transition: opacity ease 1s;
 

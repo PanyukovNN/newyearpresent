@@ -24,11 +24,10 @@
             <div class="present-wrap">
                 <div class="glow"></div>
 <!--                animate__tada-->
-                <div class="present animate__animated animate__pulse animate__infinite"></div>
-
                 <div class="popup">
                     <span class="popuptext" id="myPopup">Ещё рано &#128536;</span>
                 </div>
+                <div class="present animate__animated animate__pulse animate__infinite"></div>
             </div>
         </div>
     </div>
@@ -36,7 +35,7 @@
     <script src="js/snowfall.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 1});
+            $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 3, minSpeed: 1});
         });
 
         function getTimeRemaining(endtime) {
