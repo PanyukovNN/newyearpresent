@@ -2,7 +2,7 @@ body {
     background-color: #f2f2f2 !important;
 
     max-width: 375px;
-    max-height: 667px;
+    max-height: 570px;
     overflow: hidden;
 }
 
@@ -20,7 +20,7 @@ body {
     margin-right: auto;
 
     width: 375px !important;
-    height: 667px !important;
+    height: 570px !important;
 
     transition: all ease 5s;
 }
