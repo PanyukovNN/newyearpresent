@@ -37,22 +37,30 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 3, minSpeed: 1});
+
+            var imagesNumber = 12;
+
+            var arr = [];
+            for (var i = 0; i < imagesNumber; i++) {
+                arr.push(i);
+            }
+
+            shuffle(arr)
+
+            console.log(arr)
+
+            var backstretchData = [];
+
+            for (var i = 0; i < imagesNumber; i++) {
+                backstretchData.push("img/wallpaper-" + arr[i] + ".jpg");
+            }
+
+            $(".main-image").backstretch(backstretchData, {duration: 6000, fade: 1500, fadeFirst: false});
         });
 
-        $(".main-image").backstretch([
-            "img/wallpaper-0.jpg",
-            "img/wallpaper-1.jpg",
-            "img/wallpaper-2.jpg",
-            "img/wallpaper-3.jpg",
-            "img/wallpaper-4.jpg",
-            "img/wallpaper-5.jpg",
-            "img/wallpaper-6.jpg",
-            "img/wallpaper-7.jpg",
-            "img/wallpaper-8.jpg",
-            "img/wallpaper-9.jpg",
-            "img/wallpaper-10.jpg",
-            "img/wallpaper-11.jpg",
-        ], {duration: 6000, fade: 1500, fadeFirst: false});
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
 
         function getTimeRemaining(endtime) {
             var t = Date.parse(endtime) - Date.parse(new Date());
