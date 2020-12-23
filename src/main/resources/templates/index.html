@@ -33,10 +33,26 @@
     </div>
 
     <script src="js/snowfall.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 3, minSpeed: 1});
         });
+
+        $(".main-image").backstretch([
+            "img/wallpaper-0.jpg",
+            "img/wallpaper-1.jpg",
+            "img/wallpaper-2.jpg",
+            "img/wallpaper-3.jpg",
+            "img/wallpaper-4.jpg",
+            "img/wallpaper-5.jpg",
+            "img/wallpaper-6.jpg",
+            "img/wallpaper-7.jpg",
+            "img/wallpaper-8.jpg",
+            "img/wallpaper-9.jpg",
+            "img/wallpaper-10.jpg",
+            "img/wallpaper-11.jpg",
+        ], {duration: 6000, fade: 1500, fadeFirst: false});
 
         function getTimeRemaining(endtime) {
             var t = Date.parse(endtime) - Date.parse(new Date());
@@ -66,8 +82,8 @@
                     "<span class='timer-number'>" + ('0' + t.minutes).slice(-2) + "</span> м. " +
                     "<span class='timer-number'>" + ('0' + t.seconds).slice(-2) + "</span> сек.";
 
-                var wallpaperIndex = parseInt(new Date().getMinutes() / 6);
-                $(".main-image").css("background-image", "url(\"../img/wallpaper-" + wallpaperIndex + ".jpg\")");
+                // var wallpaperIndex = parseInt(new Date().getMinutes() / 6);
+                // $(".main-image").css("background-image", "url(\"../img/wallpaper-" + wallpaperIndex + ".jpg\")");
 
                 if (t.total <= 0) {
                     clearInterval(timeinterval);

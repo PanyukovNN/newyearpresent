@@ -22,7 +22,9 @@ body {
     width: 375px !important;
     height: 570px !important;
 
-    transition: all ease 5s;
+    align-content: start;
+
+    /*transition:  ease 5s;*/
 }
 
 /*@media (min-width: 550px) {*/
