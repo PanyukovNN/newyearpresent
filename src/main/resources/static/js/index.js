@@ -74,7 +74,7 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline="January 01 2020 00:30:00 GMT+0300";
+var deadline="January 01 2021 00:30:00 GMT+0300";
 var deadline = new Date(deadline);
 initializeClock('countdown', deadline);
 
@@ -93,10 +93,7 @@ present.on("click", function () {
 
         present.addClass("animate__rollOut");
 
-        mainText.html("&#127880;&#127882;УРА!&#127881;&#10024;<br>Теперь нажми на зайку и тебе откроется карта, где лежит настоящий подарок  &#127872;&#128071;");
-
-        document.documentElement.style.setProperty('--animate-duration', '1s');
-        bunny.addClass("animate__pulse");
+        mainText.html("&#127880;&#127882;УРА!&#127881;&#10024;<br>Нажми на зайку и тебе откроется карта, где лежит настоящий подарок  &#127872;&#128071;");
 
         pride();
         return;
@@ -206,3 +203,7 @@ function pride() {
 //         requestAnimationFrame(frame);
 //     }
 // }());
+
+bunny.on("click", function () {
+    window.location.href = "https://newyearpresent.herokuapp.com/present";
+})
