@@ -194,7 +194,7 @@ body {
 /* The actual popup */
 .popup .popuptext {
     /*visibility: hidden;*/
-    width: 180px;
+    width: 300px;
     height: 40px;
     background-color: #555;
     color: #fff;
@@ -207,7 +207,7 @@ body {
     font-size: 21px;
 
     bottom: 0;
-    left: -94px;
+    left: -151px;
 
     transition: opacity ease 1s;
 

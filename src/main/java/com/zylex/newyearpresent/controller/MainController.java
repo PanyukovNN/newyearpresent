@@ -13,6 +13,6 @@ public class MainController {
 
     @GetMapping("/present")
     public String getPresentPage() {
-        return "index";
+        return "present";
     }
 }
