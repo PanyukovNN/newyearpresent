@@ -1,6 +1,9 @@
 let mainText = $(".main-text");
 var bunny = $(".bunny");
 
+var deadline="January 01 2020 00:30:00 GMT+0300";
+var deadline = new Date(deadline);
+
 $(document).ready(function(){
     $(document).snowfall({image :"img/2.png", minSize: 10, maxSize:20, maxSpeed: 3, minSpeed: 1});
 
@@ -74,8 +77,7 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline="January 01 2021 00:30:00 GMT+0300";
-var deadline = new Date(deadline);
+
 initializeClock('countdown', deadline);
 
 var present = $(".present");
@@ -93,7 +95,7 @@ present.on("click", function () {
 
         present.addClass("animate__rollOut");
 
-        mainText.html("&#127880;&#127882;УРА!&#127881;&#10024;<br>Нажми на зайку и тебе откроется карта, где лежит настоящий подарок  &#127872;&#128071;");
+        mainText.html("&#127880;&#127882;УРА!&#127881;&#10024;Дождались!&#128157;<br>Нажми на зайку и тебе откроется карта, где лежит настоящий подарок  &#127872;&#128071;");
 
         pride();
         return;

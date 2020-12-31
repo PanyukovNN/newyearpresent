@@ -24,6 +24,7 @@ body {
 
     align-content: start;
 
+    z-index: -1;
     /*transition:  ease 5s;*/
 }
 
@@ -260,3 +261,7 @@ body {
 /*    from {opacity: 0;}*/
 /*    to {opacity:0.9;}*/
 /*}*/
+
+.map:hover {
+    transform: scale(2);
+}

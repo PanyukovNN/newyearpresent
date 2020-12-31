@@ -9,11 +9,28 @@
 <body>
 
     <div class="container">
-        Подарок
+        <div class="main-image" style="background-image: url('static/img/present-wallpaper-1.jpg')">
+            <div class="main-text" style="transform: none;">
+                Зайка, одевайся, выходи на улицу и следуй точно по маршруту, указанному на карте внизу, В конце буду ждать я с подарком&#128522;&#127873;&#128157;&#128519;
+                <br>
+                (на карту можно нажать и она увеличится)
+            </div>
+            <img class="map" src="img/map.jpg" style="
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+
+                transform: translateX(-50%);
+                transition: width 1s ease;
+                width: 150px;
+                border-radius: 25px;
+                box-shadow: 0 0 10px white;
+                border: 2px solid white;">
+
+        </div>
     </div>
 
-    <script src="js/snowfall.js"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/present.js"></script>
+
 </body>
 </html>
