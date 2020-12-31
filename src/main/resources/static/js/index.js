@@ -1,7 +1,7 @@
 let mainText = $(".main-text");
 var bunny = $(".bunny");
 
-var deadline="January 01 2021 00:30:00 GMT+0300";
+var deadline="January 01 2021 00:15:00 GMT+0300";
 var deadline = new Date(deadline);
 
 $(document).ready(function(){

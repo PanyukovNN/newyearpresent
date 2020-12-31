@@ -23,10 +23,12 @@ var mapScaled = false;
 
 $(".map").on("click", function () {
     if (!mapScaled) {
-        $(this).css("width", "290px");
+        $(this).css("width", "290px")
+            .css("bottom", "10px");
         mapScaled = true;
     } else {
-        $(this).css("width", "150px");
+        $(this).css("width", "150px")
+            .css("bottom", "25px");
         mapScaled = false;
     }
 })
